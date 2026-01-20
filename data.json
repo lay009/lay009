@@ -1,0 +1,196 @@
+[
+  {
+    "id": "climosa",
+    "thumbnail": "assets/climosa-thumb.png",
+    "header": {
+      "title": "Climosa - Application Mobile",
+      "date": "2025",
+      "description": "Application mobile éco-responsable cross-platform. Calcul d'empreinte carbone et coaching écologique. Disponible sur Android, version iOS prévue."
+    },
+    "media": {
+      "gallery": [
+        {
+          "url": "assets/Climosa-video1.mp4",
+          "type": "video",
+          "showControls": true
+        },
+        {
+          "url": "assets/Climosa-img2.jpg",
+          "type": "image"
+        },
+        {
+          "url": "assets/Climosa-img3.jpg",
+          "type": "image"
+        },
+        {
+          "url": "assets/Climosa-img4.jpg",
+          "type": "image"
+        },
+        {
+          "url": "assets/Climosa-img5.jpg",
+          "type": "image"
+        }
+      ]
+    },
+    "links": [
+      { 
+        "label": "Disponible sur Google Play", 
+        "url": "https://play.google.com/store/apps/details?id=fr.climosa.mobile",
+        "type": "store"
+      },
+      { 
+        "label": "Visiter le Site Web", 
+        "url": "https://climosa.app/",
+        "type": "web"
+      }
+    ],
+    "technical": {
+      "solutions": [
+        {
+          "name": "Flutter & Dart",
+          "desc": "Développement cross-platform permettant de maintenir une base de code unique performante pour Android et iOS."
+        },
+        {
+          "name": "Design & UX (Figma)",
+          "desc": "Maîtrise de Figma pour la conception de l'interface utilisateur et des prototypes interactifs, garantissant une ergonomie professionnelle avant le développement."
+        },
+        {
+          "name": "Ecosystème Firebase",
+          "desc": "Utilisation avancée de Firestore (NoSQL), Cloud Functions (Node.js), Auth, Storage et Hosting pour un backend robuste, sécurisé et scalable."
+        },
+        {
+          "name": "Architecture API REST",
+          "desc": "Conception d'un serveur backend dédié exécutant le moteur Publicodes pour centraliser et sécuriser la logique de calcul."
+        }
+      ]
+    },
+    "functional": {
+      "description": "Climosa permet de calculer et suivre son empreinte carbone via une interface mobile fluide. L'application communique avec un serveur dédié qui exécute les règles de calcul complexes et renvoie les résultats en temps réel. En parallèle, un site web vitrine a été conçu pour héberger les documents contractuels (CGU, CGV, mentions légales) nécessaires à la publication sur les stores.",
+      "features": [
+        "Calculateur précis : Intégration d'un backend personnalisé hébergé sur Firebase Cloud Functions pour l'exécution du moteur Publicodes.",
+        "Persistance des données : Synchronisation complète du profil utilisateur via Cloud Firestore.",
+        "Monétisation : Gestion des abonnements et accès premium via l'intégration RevenueCat.",
+        "Présence Web : Site vitrine dédié pour la conformité légale et la présentation du projet.",
+        "Disponibilité : En production sur Play Store, portage App Store planifié."
+      ]
+    },
+    "conclusion": {
+      "observation": "La séparation du moteur de calcul et de l'affichage permet de mettre à jour les barèmes écologiques sans intervention sur les stores. De plus, l'adoption d'un backend serverless offre une scalabilité optimale tout en minimisant les coûts de maintenance.",
+      "learnings": [
+        "Maîtrise du cycle produit | : Livraison d'un projet complet, de la maquette initiale à la publication finale sur les stores.",
+        "Développement Full Stack | : Intégration d'une API REST personnalisée avec un front-end mobile réactif.",
+        "Publication & Conformité | : Gestion administrative et technique du déploiement store et des obligations légales (CGV/CGU)."
+      ]
+    }
+  },
+    {
+    "id": "bitcoin-network",
+    "thumbnail": "assets/bitcoin-thumb.webp",
+    "header": {
+      "title": "Deep Learning Bitcoin (From Scratch)",
+      "date": "2024",
+      "description": "Développement d'un réseau de neurones profond conçu sans frameworks (TensorFlow/PyTorch) pour prédire les mouvements du cours du Bitcoin."
+    },
+    "media": {
+      "gallery": [
+        {
+          "url": "assets/Figure_16cc_64pc_l=0.0005.png",
+          "type": "image"
+        }
+      ]
+    },
+    "technical": {
+"solutions": [
+  {
+    "name": "Python",
+    "desc": "Langage utilisé pour la structure du projet et la logique de traitement des données."
+  },
+  {
+    "name": "NumPy",
+    "desc": "Utilisé pour effectuer l'ensemble des calculs matriciels nécessaires au fonctionnement du réseau de neurones."
+  },
+  {
+    "name": "Matplotlib",
+    "desc": "Génération des graphiques pour l'analyse visuelle des résultats, notamment les courbes de Loss et d'Accuracy."
+  },
+  {
+    "name": "API Binance",
+    "desc": "Extraction des données historiques réelles (OHLCV) pour constituer la base d'apprentissage du modèle."
+  }
+]
+    },
+    "functional": {
+      "description": "L'objectif de ce projet était de prédire la tendance du Bitcoin (hausse ou baisse) toutes les heures via un réseau de neurones artificiels. Pour y parvenir, le modèle analyse les 500 dernières heures, exploitant 20 indicateurs techniques (RSI, MACD, Bandes de Bollinger...). Cette démarche \"From Scratch\" m'a permis de comprendre en profondeur le Deep Learning en recréant toute la logique mathématique.",
+      "features": [
+        "Conception du Dataset : Création complète d'un dataset en suivant les recommandations avec une répartition de 80% pour l'entraînement (train) et 20% pour l'évaluation (test).",
+        "Architecture Dense : Réseau massif de 10 000 neurones d'entrée (vision de 500h de données × 20 indicateurs), 16 couches cachées de 64 neurones chacune et 1 neurone de sortie.",
+        "Approche \"From Scratch\" : Développement intégral sans Framework (TensorFlow/PyTorch) pour bien comprendre le fonctionnement interne des réseaux de neurones.",
+        "Étude de Rentabilité : Prise en compte des frais de transaction Binance pour valider la viabilité réelle des signaux d'achat/vente."
+      ]
+    },
+    "conclusion": {
+      "observation": [
+        "Analyse des résultats | : L'analyse du meilleur résultat (image ci-dessus) montre un pic d'accuracy de 62 % sur le test set. Si ce chiffre semble prometteur au premier abord, il est en réalité trompeur. L'échantillon testé présentait une tendance haussière quasi permanente. Un modèle pariant systématiquement sur la hausse aurait obtenu un score similaire.",
+        "Analyse du biais de marché | : Cette corrélation démontre que le réseau a appris la tendance globale plutôt qu'une réelle capacité prédictive. Par conséquent, le modèle serait totalement inefficace face à un marché baissier ou instable, ne faisant pas mieux que le hasard.",
+        "Diagnostic de l'apprentissage (Overfitting) | : Sur le graphique de perte (à gauche), on observe un début d'overfitting (surapprentissage). Alors que le \"train loss\" (bleu) continue de chuter, le \"test loss\" (orange) stagne. Cela prouve que le modèle mémorise le bruit du dataset au lieu de généraliser une solution universelle.",
+        "Axes d'amélioration identifiés | : Pour atteindre une performance réelle, trois facteurs ont manqué à ce projet ambitieux : une puissance de calcul supérieure (GPU), une profondeur de données temporelles plus vaste ainsi que l'intégration de données externes essentielles, comme l'analyse de l'opinion publique sur les réseaux sociaux."
+      ],
+      "learnings": [
+        "Maîtrise du Deep Learning \"From Scratch\" | : Compréhension profonde de l'architecture des réseaux de neurones profonds, de la gestion des couches cachées et des mécanismes de rétropropagation.",
+        "Expertise Python & Calcul Matriciel | : Utilisation avancée de NumPy pour le calcul haute performance sur des milliers de paramètres et de Matplotlib pour la visualisation des métriques d'apprentissage.",
+        "Ingénierie de données financières | : Maîtrise de l'API Binance pour l'extraction de données réelles et capacité à transformer des flux bruts en datasets structurés (normalisation, fenêtres glissantes).",
+        "Analyse et gestion de données complexes | : Expérience concrète de la gestion du cycle de vie de la donnée, incluant la création de pipelines de traitement et la répartition rigoureuse (Train/Test) des échantillons.",
+        "Interprétation critique des résultats | : Capacité à diagnostiquer la santé d'un modèle, à identifier des phénomènes d'overfitting et à analyser avec recul la pertinence d'une prédiction face à la réalité du marché."
+        ]
+    }
+  },
+  {
+    "id": "selection-naturelle",
+    "thumbnail": "assets/selection-naturelle-thumb.webp",
+    "header": {
+      "title": "Simulation de Sélection Naturelle",
+      "date": "2023",
+      "description": "Simulation algorithmique de l'évolution. Création d'un écosystème d'êtres artificiels autonomes pour observer l'émergence de traits optimaux via la sélection naturelle."
+    },
+    "media": {
+      "gallery": [
+        {
+          "url": "assets/simulation.mp4",
+          "type": "video"
+        }
+      ]
+    },
+    "technical": {
+      "solutions": [
+        {
+            "name": "Python",
+            "desc": "Langage utilisé pour l'ensemble du projet, permettant une écriture claire et structurée des algorithmes d'évolution."
+        },
+        {
+            "name": "Pygame",
+            "desc": "Bibliothèque gérant le moteur de rendu 2D, la boucle de jeu et les interactions en temps réel."
+        },
+        {
+            "name": "Programmation orientée objet (POO)",
+            "desc": "Utilisation de l'héritage pour créer des entités modulaires (Prédateurs/Nourriture) partageant une logique commune."
+        }
+      ]
+    },
+    "functional": {
+      "description": "Le projet simule un écosystème où des individus artificiels évoluent. Chaque individu naît avec des caractéristiques aléatoires (taille, vitesse, zone de recherche). Ils consomment de l'énergie en continu et doivent trouver de la nourriture (gris clair) pour survivre, tout en évitant les prédateurs (gris foncé). À intervalles réguliers, les survivants se reproduisent et transmettent leurs traits à leurs enfants avec une légère mutation.",
+      "features": [
+        "Système d'Énergie : Consommation constante nécessitant une recherche active de nourriture.",
+        "Reproduction & Hérédité : Transmission des caractéristiques parentales avec variation aléatoire.",
+        "Mécanique de Vision : La zone de recherche définit la capacité à voir nourriture et dangers."
+      ]
+    },
+    "conclusion": {
+      "observation": "Les individus possédant les caractéristiques les plus optimales (équilibre entre vitesse et consommation) survivent plus longtemps et se reproduisent davantage. On observe ainsi une convergence naturelle de la population vers ces traits performants.",
+      "learnings": [
+        "Mise en pratique de la Programmation Orientée Objet (POO) en Python.",
+        "Gestion des interactions graphiques et des boucles de simulation avec Pygame.",
+        "Compréhension des algorithmes basés sur des règles biologiques simples."
+      ]
+    }
+  }
+]
