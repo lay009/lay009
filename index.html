@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,14 +21,20 @@
         }
     </script>
     <style>
-        body { background-color: #020617; color: #e2e8f0; }
-        
+        body {
+            background-color: #020617;
+            color: #e2e8f0;
+        }
+
         .bg-grid-fixed {
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             z-index: -1;
             background-size: 50px 50px;
-            background-image: 
+            background-image:
                 linear-gradient(to right, rgba(34, 211, 238, 0.05) 1px, transparent 1px),
                 linear-gradient(to bottom, rgba(34, 211, 238, 0.05) 1px, transparent 1px);
             mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
@@ -45,13 +52,30 @@
             pointer-events: none;
         }
 
-        section { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
-        section.visible { opacity: 1; transform: translateY(0); }
+        section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
 
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #020617; }
-        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
-        
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #020617;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+
         #bg-canvas {
             position: fixed;
             top: 0;
@@ -63,18 +87,29 @@
         }
     </style>
 </head>
+
 <body class="min-h-screen flex flex-col relative overflow-x-hidden">
 
     <canvas id="bg-canvas"></canvas>
     <div class="bg-grid-fixed"></div>
     <div class="glow-effect"></div>
 
-    <nav class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/50 h-16 flex items-center px-6 shadow-lg shadow-black/20">
+    <nav
+        class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/50 h-16 flex items-center px-6 shadow-lg shadow-black/20">
         <div class="w-full max-w-7xl mx-auto flex justify-between items-center">
             <span class="text-cyan-400 font-bold tracking-tighter text-xl">PORTFOLIO</span>
-            <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-slate-400">
-                <a href="#projets" class="hover:text-cyan-400 transition-colors">Projets</a>
-                <a href="#about" class="hover:text-cyan-400 transition-colors">À Propos</a>
+
+            <div class="hidden md:flex gap-8 items-center">
+                <a href="#projets"
+                    class="text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-cyan-400 transition-colors">Projets</a>
+                <a href="#about"
+                    class="text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-cyan-400 transition-colors">À
+                    Propos</a>
+
+                <a href="CV Merlin Sarrassat.pdf" target="_blank"
+                    class="px-4 py-2 bg-cyan-500/10 border border-cyan-500/50 text-cyan-400 rounded-lg hover:bg-cyan-500 hover:text-slate-950 transition-all text-xs font-bold uppercase tracking-widest">
+                    Mon CV
+                </a>
             </div>
         </div>
     </nav>
@@ -83,14 +118,22 @@
         <section class="min-h-[70vh] flex flex-col justify-center visible mb-16 relative">
             <div class="flex flex-col-reverse md:flex-row justify-between items-start md:items-end gap-8 mb-16">
                 <div class="text-left max-w-3xl z-10">
-                    <span class="text-xs text-cyan-500 font-bold uppercase tracking-widest mb-4 block">Portfolio de</span>
-                    <h1 id="user-name" class="text-5xl md:text-8xl font-black text-white mb-6 leading-tight tracking-tight drop-shadow-lg">
+                    <span class="text-xs text-cyan-500 font-bold uppercase tracking-widest mb-4 block">Portfolio
+                        de</span>
+                    <h1 id="user-name"
+                        class="text-5xl md:text-8xl font-black text-white mb-6 leading-tight tracking-tight drop-shadow-lg">
                         Chargement...
                     </h1>
-                    <p id="user-role" class="text-lg md:text-xl text-slate-400 leading-relaxed border-l-4 border-cyan-500/30 pl-6 mb-10"></p>
-                    <a href="#projets" class="inline-flex items-center gap-3 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold py-4 px-8 rounded-lg transition-all transform hover:-translate-y-1">
+                    <p id="user-role"
+                        class="text-lg md:text-xl text-slate-400 leading-relaxed border-l-4 border-cyan-500/30 pl-6 mb-10">
+                    </p>
+                    <a href="#projets"
+                        class="inline-flex items-center gap-3 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold py-4 px-8 rounded-lg transition-all transform hover:-translate-y-1">
                         Explorer les projets
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 7 10 10M17 7V17H7"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m7 7 10 10M17 7V17H7" />
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -106,102 +149,136 @@
 
 
         <section id="about" class="py-24">
-    <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
-        À Propos
-        <span class="h-px bg-slate-800 flex-grow ml-4"></span>
-    </h2>
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
+                À Propos
+                <span class="h-px bg-slate-800 flex-grow ml-4"></span>
+            </h2>
 
-    <div class="grid lg:grid-cols-12 gap-12 items-start">
-        <div class="lg:col-span-7">
-    <p class="text-lg md:text-xl text-slate-400 leading-relaxed italic">
-        Passionné d'informatique depuis plus de 5 ans, j'ai toujours eu cette curiosité de comprendre comment les choses fonctionnent réellement. J'aime toucher à tout et je ne lâche jamais rien tant que je n'ai pas mené à bien ce que j'ai entrepris.
-    </p>
-        </div>
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-7">
+                    <p class="text-lg md:text-xl text-slate-400 leading-relaxed italic">
+                        Passionné d'informatique depuis plus de 5 ans, j'ai toujours eu cette curiosité de comprendre
+                        comment les choses fonctionnent réellement. J'aime toucher à tout et je ne lâche jamais rien
+                        tant que je n'ai pas mené à bien ce que j'ai entrepris.
+                    </p>
+                </div>
 
-        <div class="lg:col-span-5">
-            <div class="bg-slate-900/80 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 shadow-xl flex flex-col">
-                <h3 class="flex items-center gap-2 text-cyan-400 font-bold uppercase tracking-wider text-[10px] mb-6 border-b border-slate-700/50 pb-4">
-                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-                    Expertise Technique
-                </h3>
-                
-                <ul class="space-y-4">
-                    <li class="flex items-center gap-3 py-1">
-                        <div class="w-6 h-6 rounded bg-cyan-500/10 flex items-center justify-center text-cyan-400 shrink-0">
-                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                        </div>
-                        <span class="text-slate-200 text-sm font-medium">Full Stack</span>
-                    </li>
-                    <li class="flex items-center gap-3 py-1">
-                        <div class="w-6 h-6 rounded bg-cyan-500/10 flex items-center justify-center text-cyan-400 shrink-0">
-                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-                        </div>
-                        <span class="text-slate-200 text-sm font-medium">Mobile</span>
-                    </li>
-                    <li class="flex items-center gap-3 py-1">
-                        <div class="w-6 h-6 rounded bg-cyan-500/10 flex items-center justify-center text-cyan-400 shrink-0">
-                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
-                        </div>
-                        <span class="text-slate-200 text-sm font-medium">UI/UX Design</span>
-                    </li>
-                    <li class="flex items-center gap-3 py-1">
-                        <div class="w-6 h-6 rounded bg-cyan-500/10 flex items-center justify-center text-cyan-400 shrink-0">
-                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" /></svg>
-                        </div>
-                        <span class="text-slate-200 text-sm font-medium">Deep Learning</span>
-                    </li>
-                    <li class="flex items-center gap-3 py-1">
-                        <div class="w-6 h-6 rounded bg-cyan-500/10 flex items-center justify-center text-cyan-400 shrink-0">
-                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
-                        </div>
-                        <span class="text-slate-200 text-sm font-medium">API REST</span>
-                    </li>
-                    <li class="flex items-center gap-3 py-1">
-                        <div class="w-6 h-6 rounded bg-cyan-500/10 flex items-center justify-center text-cyan-400 shrink-0">
-                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.58 4 8 4s8-1.79 8-4M4 7c0-2.21 3.58-4 8-4s8 1.79 8 4m0 5c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg>
-                        </div>
-                        <span class="text-slate-200 text-sm font-medium">Bases de données</span>
-                    </li>
-                </ul>
+                <div class="lg:col-span-5">
+                    <div
+                        class="bg-slate-900/80 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 shadow-xl flex flex-col">
+                        <h3
+                            class="flex items-center gap-2 text-cyan-400 font-bold uppercase tracking-wider text-[10px] mb-6 border-b border-slate-700/50 pb-4">
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                            </svg>
+                            Expertise Technique
+                        </h3>
+
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 py-1">
+                                <div
+                                    class="w-6 h-6 rounded bg-cyan-500/10 flex items-center justify-center text-cyan-400 shrink-0">
+                                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <span class="text-slate-200 text-sm font-medium">Full Stack</span>
+                            </li>
+                            <li class="flex items-center gap-3 py-1">
+                                <div
+                                    class="w-6 h-6 rounded bg-cyan-500/10 flex items-center justify-center text-cyan-400 shrink-0">
+                                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <span class="text-slate-200 text-sm font-medium">Mobile</span>
+                            </li>
+                            <li class="flex items-center gap-3 py-1">
+                                <div
+                                    class="w-6 h-6 rounded bg-cyan-500/10 flex items-center justify-center text-cyan-400 shrink-0">
+                                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                                    </svg>
+                                </div>
+                                <span class="text-slate-200 text-sm font-medium">UI/UX Design</span>
+                            </li>
+                            <li class="flex items-center gap-3 py-1">
+                                <div
+                                    class="w-6 h-6 rounded bg-cyan-500/10 flex items-center justify-center text-cyan-400 shrink-0">
+                                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                                    </svg>
+                                </div>
+                                <span class="text-slate-200 text-sm font-medium">Deep Learning</span>
+                            </li>
+                            <li class="flex items-center gap-3 py-1">
+                                <div
+                                    class="w-6 h-6 rounded bg-cyan-500/10 flex items-center justify-center text-cyan-400 shrink-0">
+                                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                                    </svg>
+                                </div>
+                                <span class="text-slate-200 text-sm font-medium">API REST</span>
+                            </li>
+                            <li class="flex items-center gap-3 py-1">
+                                <div
+                                    class="w-6 h-6 rounded bg-cyan-500/10 flex items-center justify-center text-cyan-400 shrink-0">
+                                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.58 4 8 4s8-1.79 8-4M4 7c0-2.21 3.58-4 8-4s8 1.79 8 4m0 5c0 2.21-3.58 4-8 4s-8-1.79-8-4" />
+                                    </svg>
+                                </div>
+                                <span class="text-slate-200 text-sm font-medium">Bases de données</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
     </main>
 
-<footer class="w-full bg-slate-950/50 border-t border-slate-800/30 pt-5 pb-8">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
-            
-            <div class="max-w-sm">
-                <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-2">Un projet en tête ?</h3>
-                <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                    Actuellement en recherche de stage et ouvert à toute nouvelle opportunité de collaboration.
-                </p>
-                <a href="mailto:merlin.sarrassat@gmail.com" class="text-cyan-400 hover:text-cyan-300 text-sm font-bold flex items-center gap-2 transition-colors group">
-                    Me contacter par email
-                    <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                </a>
-            </div>
+    <footer class="w-full bg-slate-950/50 border-t border-slate-800/30 pt-5 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
 
-            <div id="social-links" class="flex flex-wrap gap-3">
+                <div class="max-w-sm">
+                    <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-2">Un projet en tête ?</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Actuellement en recherche de stage et ouvert à toute nouvelle opportunité de collaboration.
+                    </p>
+                    <a href="mailto:merlin.sarrassat@gmail.com"
+                        class="text-cyan-400 hover:text-cyan-300 text-sm font-bold flex items-center gap-2 transition-colors group">
+                        Me contacter par email
+                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
                 </div>
-        </div>
 
-        <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-slate-900/50 gap-4">
-            <div class="flex items-center gap-4">
-                <p class="text-slate-500 text-[10px] uppercase tracking-[0.2em]">
-                    &copy; 2026 - <span id="footer-name" class="text-slate-300">Merlin Sarrassat</span>
+                <div id="social-links" class="flex flex-wrap gap-3">
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-slate-900/50 gap-4">
+                <div class="flex items-center gap-4">
+                    <p class="text-slate-500 text-[10px] uppercase tracking-[0.2em]">
+                        &copy; 2026 - <span id="footer-name" class="text-slate-300">Merlin Sarrassat</span>
+                    </p>
+                </div>
+                <p class="text-slate-600 text-[10px] uppercase tracking-[0.2em]">
+                    Développement & Ingénierie Logicielle
                 </p>
             </div>
-            <p class="text-slate-600 text-[10px] uppercase tracking-[0.2em]">
-                Développement & Ingénierie Logicielle
-            </p>
         </div>
-    </div>
-</footer>
+    </footer>
 
 
     <script>
@@ -273,9 +350,9 @@
                 const res = await fetch('data.json');
                 const data = await res.json();
                 const projects = Array.isArray(data) ? data : data.projects;
-                
-                const info = { 
-                    name: "Merlin Sarrassat", 
+
+                const info = {
+                    name: "Merlin Sarrassat",
                     role: "Développement & Ingénierie Logicielle",
                     email: "merlin.sarrassat@gmail.com",
                     github: "https://github.com/lay009/",
@@ -291,19 +368,19 @@
                 social.innerHTML = '';
                 const keys = ['email', 'github', 'linkedin', 'phone'];
                 keys.forEach(k => {
-                    if(info[k]) {
+                    if (info[k]) {
                         let href;
-                        if(k === 'email') href = `mailto:${info[k]}`;
-                        else if(k === 'phone') href = `tel:${info[k].replace(/\s/g, '')}`;
+                        if (k === 'email') href = `mailto:${info[k]}`;
+                        else if (k === 'phone') href = `tel:${info[k].replace(/\s/g, '')}`;
                         else href = info[k];
-                        
+
                         social.innerHTML += `<a href="${href}" target="_blank" class="px-4 py-2 bg-slate-800/50 rounded-full text-slate-400 hover:text-cyan-400 border border-slate-700 hover:border-cyan-500/50 text-[10px] uppercase tracking-widest transition-all">${k === 'phone' ? info[k] : k}</a>`;
                     }
                 });
 
                 const container = document.getElementById('projects-container');
-projects.forEach(p => {
-    container.innerHTML += `
+                projects.forEach(p => {
+                    container.innerHTML += `
         <div class="relative group">
             <div class="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl opacity-0 group-hover:opacity-30 blur transition duration-500"></div>
             <a href="project.html?id=${p.id}" class="relative block bg-slate-900/80 backdrop-blur-sm border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all shadow-xl h-full">
@@ -326,14 +403,15 @@ projects.forEach(p => {
                 </div>
             </a>
         </div>`;
-});
+                });
 
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
                 }, { threshold: 0.1 });
                 document.querySelectorAll('section').forEach(s => observer.observe(s));
-            } catch(e) { console.error(e); }
+            } catch (e) { console.error(e); }
         });
     </script>
 </body>
+
 </html>
