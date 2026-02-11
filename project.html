@@ -480,12 +480,28 @@
                     linkedin: "https://www.linkedin.com/in/merlin-sarrassat-575265348"
                 };
                 document.getElementById('footer-name').innerText = info.name;
+
+
                 const social = document.getElementById('social-links');
                 social.innerHTML = '';
-                ['email', 'github', 'linkedin', 'phone'].forEach(k => {
+                const keys = ['email', 'phone', 'github', 'linkedin'];
+
+                keys.forEach(k => {
                     if (info[k]) {
-                        let href = k === 'email' ? `mailto:${info[k]}` : (k === 'phone' ? `tel:${info[k].replace(/\s/g, '')}` : info[k]);
-                        social.innerHTML += `<a href="${href}" target="_blank" class="px-4 py-2 bg-slate-800/50 rounded-full text-slate-400 hover:text-cyan-400 border border-slate-700 hover:border-cyan-500/50 text-[10px] uppercase tracking-widest transition-all">${k === 'phone' ? info[k] : k}</a>`;
+                        const isContactInfo = (k === 'email' || k === 'phone');
+                        const label = isContactInfo ? info[k] : k;
+
+                        if (isContactInfo) {
+                            social.innerHTML += `
+                <span class="px-4 py-2 bg-slate-800/50 rounded-full text-slate-400 border border-slate-700 text-[10px] uppercase tracking-widest">
+                    ${label}
+                </span>`;
+                        } else {
+                            social.innerHTML += `
+                <a href="${info[k]}" target="_blank" class="px-4 py-2 bg-slate-800/50 rounded-full text-slate-400 hover:text-cyan-400 border border-slate-700 hover:border-cyan-500/50 text-[10px] uppercase tracking-widest transition-all">
+                    ${label}
+                </a>`;
+                        }
                     }
                 });
 
