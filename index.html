@@ -366,15 +366,25 @@
 
                 const social = document.getElementById('social-links');
                 social.innerHTML = '';
-                const keys = ['email', 'github', 'linkedin', 'phone'];
+                const keys = ['email', 'phone', 'github', 'linkedin'];
+
                 keys.forEach(k => {
                     if (info[k]) {
-                        let href;
-                        if (k === 'email') href = `mailto:${info[k]}`;
-                        else if (k === 'phone') href = `tel:${info[k].replace(/\s/g, '')}`;
-                        else href = info[k];
 
-                        social.innerHTML += `<a href="${href}" target="_blank" class="px-4 py-2 bg-slate-800/50 rounded-full text-slate-400 hover:text-cyan-400 border border-slate-700 hover:border-cyan-500/50 text-[10px] uppercase tracking-widest transition-all">${k === 'phone' ? info[k] : k}</a>`;
+                        const isContactInfo = (k === 'email' || k === 'phone');
+                        const label = isContactInfo ? info[k] : k;
+
+                        if (isContactInfo) {
+                            social.innerHTML += `
+                <span class="px-4 py-2 bg-slate-800/50 rounded-full text-slate-400 border border-slate-700 text-[10px] uppercase tracking-widest">
+                    ${label}
+                </span>`;
+                        } else {
+                            social.innerHTML += `
+                <a href="${info[k]}" target="_blank" class="px-4 py-2 bg-slate-800/50 rounded-full text-slate-400 hover:text-cyan-400 border border-slate-700 hover:border-cyan-500/50 text-[10px] uppercase tracking-widest transition-all">
+                    ${label}
+                </a>`;
+                        }
                     }
                 });
 
